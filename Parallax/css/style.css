@@ -1,0 +1,301 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: 'Dead Island';
+  src: url("../fonts/DeadIsland.eot");
+  src: url("../fonts/DeadIsland.eot?#iefix") format("embedded-opentype"), url("../fonts/DeadIsland.woff2") format("woff2"), url("../fonts/DeadIsland.woff") format("woff"), url("../fonts/DeadIsland.ttf") format("truetype"), url("../fonts/DeadIsland.svg#DeadIsland") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #0f0101;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00b7ff;
+  border-radius: 9em;
+}
+
+body {
+  font-family: 'Dead Island';
+  color: #fff;
+  letter-spacing: 10px;
+  background-color: #631c1c;
+  text-align: center;
+  line-height: 120%;
+}
+
+@media (min-width: 1330px) {
+  body {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 1330px) {
+  body {
+    font-size: calc(80px + 10 * (100vw / 1330));
+  }
+}
+
+@media (max-width: 767.98px) {
+  body {
+    font-size: calc(80px + 17 * ((100vw - 320px) / 1330));
+  }
+}
+
+.wrapper {
+  will-change: transform;
+}
+
+.text {
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.gon {
+  position: relative;
+}
+
+.gon .title {
+  text-shadow: 0 0 15px #ca1212;
+}
+
+.gon__content {
+  height: 100vh;
+  position: relative;
+}
+
+.gon__layer_top {
+  background: url("../img/gon/background.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--gonScroll) / 1.6), 0);
+          transform: translate3d(0, calc(var(--gonScroll) / 1.6), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 120%;
+}
+
+.gon__layer_midle {
+  background: url("../img/gon/fire.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--gonScroll) / 3.5), 0);
+          transform: translate3d(0, calc(var(--gonScroll) / 3.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 120%;
+}
+
+.gon__layer_button {
+  background: url("../img/gon/gon.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--gonScroll) / 8), 0);
+          transform: translate3d(0, calc(var(--gonScroll) / 8), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 105%;
+}
+
+.killua {
+  position: relative;
+  overflow: hidden;
+}
+
+.killua .title {
+  text-shadow: 0 0 15px #00b7ff;
+}
+
+.killua__content {
+  height: 100vh;
+  position: relative;
+}
+
+.killua__layer_top {
+  background: url("../img/killua/background.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--killuaScroll) / 1.6), 0);
+          transform: translate3d(0, calc(var(--killuaScroll) / 1.6), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 120%;
+}
+
+.killua__layer_midle {
+  background: url("../img/killua/lightnin.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--killuaScroll) / 2.5), 0);
+          transform: translate3d(0, calc(var(--killuaScroll) / 2.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 120%;
+}
+
+.killua__layer_button {
+  background: url("../img/killua/killua.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--killuaScroll) / 8), 0);
+          transform: translate3d(0, calc(var(--killuaScroll) / 8), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 105%;
+}
+
+.kurapiko {
+  position: relative;
+  overflow: hidden;
+}
+
+.kurapiko .title {
+  text-shadow: 0 0 15px #ab16e6;
+}
+
+.kurapiko__content {
+  height: 100vh;
+  position: relative;
+}
+
+.kurapiko__layer_top {
+  background: url("../img/kurapiko/background.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--kurapikoScroll) / 1.6), 0);
+          transform: translate3d(0, calc(var(--kurapikoScroll) / 1.6), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 150%;
+}
+
+.kurapiko__layer_midle {
+  background: url("../img/kurapiko/chains.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--kurapikoScroll) / 2.5), 0);
+          transform: translate3d(0, calc(var(--kurapikoScroll) / 2.5), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 120%;
+}
+
+.kurapiko__layer_button {
+  background: url("../img/kurapiko/kurapiko.png") 50%/cover no-repeat;
+  -webkit-transform: translate3d(0, calc(var(--kurapikoScroll) / 8), 0);
+          transform: translate3d(0, calc(var(--kurapikoScroll) / 8), 0);
+  -webkit-transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  transition: transform 0.75s cubic-bezier(0.075, 0.5, 0, 1), -webkit-transform 0.75s cubic-bezier(0.075, 0.5, 0, 1);
+  height: 105%;
+}

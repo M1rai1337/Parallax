@@ -1,0 +1,150 @@
+@import '_mixins';
+@import '_reset';
+@import '_fonts';
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: rgb(15, 1, 1);
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 183, 255);
+    border-radius: 9em;
+}
+
+
+body{
+    font-family: 'Dead Island';
+    color: #fff;
+    @include adaptiv-font(90, 80);
+    letter-spacing: 10px;
+    background-color: rgb(99, 28, 28);
+    text-align: center;
+    line-height: 120%;
+}
+
+.wrapper{
+    will-change: transform;
+}
+
+.text{
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.gon{
+    position: relative;
+
+    .title{
+        text-shadow: 0 0 15px rgb(202, 18, 18);
+    }
+
+    &__content{
+        height: 100vh;
+        position: relative;
+    }
+
+    &__layer_top{
+        background: url("../img/gon/background.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--gonScroll) / 1.6), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 120%;
+    }
+
+    &__layer_midle{
+        background: url("../img/gon/fire.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--gonScroll) / 3.5), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 120%;
+    }
+
+    &__layer_button{
+        background: url("../img/gon/gon.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--gonScroll) / 8), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 105%;
+    }
+}
+
+.killua{
+    position: relative;
+    overflow: hidden;
+
+    .title{
+        text-shadow: 0 0 15px rgb(0, 183, 255);
+    }
+
+    &__content{
+        height: 100vh;
+        position: relative;
+    }
+
+    &__layer_top{
+        background: url("../img/killua/background.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--killuaScroll) / 1.6), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 120%;
+    }
+
+    &__layer_midle{
+        background: url("../img/killua/lightnin.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--killuaScroll) / 2.5), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 120%;
+    }
+
+    &__layer_button{
+        background: url("../img/killua/killua.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--killuaScroll) / 8), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 105%;
+    }
+}
+
+.kurapiko{
+    position: relative;
+    overflow: hidden;
+
+    .title{
+        text-shadow: 0 0 15px rgb(171, 22, 230);
+    }
+
+    &__content{
+        height: 100vh;
+        position: relative;
+    }
+
+    &__layer_top{
+        background: url("../img/kurapiko/background.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--kurapikoScroll) / 1.6), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 150%;
+    }
+
+    &__layer_midle{
+        background: url("../img/kurapiko/chains.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--kurapikoScroll) / 2.5), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 120%;
+    }
+
+    &__layer_button{
+        background: url("../img/kurapiko/kurapiko.png")  50%/cover no-repeat;
+        transform: translate3d(0, calc(var(--kurapikoScroll) / 8), 0);
+        transition: transform .75s cubic-bezier(.075, .5, 0, 1);
+        height: 105%;
+    }
+}
